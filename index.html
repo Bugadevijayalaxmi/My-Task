@@ -1,51 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-        <title>Calculator</title>
-        <link rel="stylesheet" href="style.css">
 
-        </head>
-        <body>
-            <h1> Digital Calculator </h1>
-            <form id="Calculator">
-                <input type="text" name="display" id=display style="width: 370px; height: 70px; background-color: rgba(95, 141, 160, 0.945);"><br>
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Landing Page</title>
+    <style>
 
-                <input class="btn" type="button" value="0" onclick="appendToDisplay('0')">
-                <input class="btn" type="button" value="1" onclick="appendToDisplay('1')">
-                <input class="btn" type="button" value="2" onclick="appendToDisplay('2')">
-                <input class="btn" type="button" value="+" onclick="appendToDisplay('+')"><br>
-                <input class="btn" type="button" value="3" onclick="appendToDisplay('3')">
-                <input class="btn" type="button" value="4" onclick="appendToDisplay('4')">
-                <input class="btn" type="button" value="5" onclick="appendToDisplay('5')">
-                <input class="btn" type="button" value="-" onclick="appendToDisplay('-')"><br>
-                <input class="btn" type="button" value="6" onclick="appendToDisplay('6')">
-                <input class="btn" type="button" value="7" onclick="appendToDisplay('7')">
-                <input class="btn" type="button" value="8" onclick="appendToDisplay('8')">
-                <input class="btn" type="button" value="*" onclick="appendToDisplay('*')"><br>
-                <input class="btn" type="button" value="9" onclick="appendToDisplay('9')">
-                <input class="btn" type="button" value="C" onclick="clearDisplay()">
-                <input class="btn" type="button" value="=" onclick="calculateResult()">
-                <input class="btn" type="button" value="÷" onclick="appendToDisplay('÷')"><br>
-            </form>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
         
-            <script>
-                const display = document.getElementById('display');
-        
-                function appendToDisplay(value) {
-                    display.value += value;
-                }
-                function clearDisplay() {
-                    display.value = '';
-                }
-                function calculateResult() {
-                    try {
-                        display.value = eval(display.value);
-                    } catch {
-                        display.value = 'Error';
-                    }
-                }
-            </script>
-        </body>
-        </html>
+        header {
+            background: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        header .cta-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 1rem 2rem;
+            background: #333;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        header .cta-btn:hover {
+            background: #222;
+        }
+
+        .features {
+            padding: 2rem;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        .features h2 {
+            margin-bottom: 1rem;
+        }
+
+        .features .feature {
+            display: inline-block;
+            width: 30%;
+            margin: 1rem 1%;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .features .feature h3 {
+            margin: 0.5rem 0;
+        }
+
+        .about {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .about img {
+            width: 50%;
+            margin: 1rem 0;
+            border-radius: 10px;
+        }
+
+        .testimonials {
+            background: #f4f4f4;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            margin-bottom: 1rem;
+        }
+
+        .testimonial {
+            display: inline-block;
+            width: 30%;
+            margin: 1rem 1%;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Our Service</h1>
+        <p>Your gateway to better solutions.</p>
+        <a href="#features" class="cta-btn">Learn More</a>
+    </header>
+
+    <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="feature">
+            <h3>Feature 1</h3>
+            <p>High-quality and reliable services tailored to your needs.</p>
+        </div>
+        <div class="feature">
+            <h3>Feature 2 </h3>
+            <p>Efficient solutions delivered with precision and care.</p>
+            
+        </div>
+        <div class="feature" style="border: white;">
+            <h3>Feature 3</h3>
+            <p>Customer-centric approach ensuring satisfaction every time.</p>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing top-notch services to our clients, ensuring every experience is seamless and effective.</p>
+        <img src="D:\Passport_Photograph.jpg" alt="About Us">
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <p>"This service is amazing! Highly recommend to anyone looking for quality."</p>
+            <p>- Client 1</p>
+        </div>
+        <div class="testimonial">
+            <p>"I was blown away by the professionalism and attention to detail."</p>
+            <p>- Client 2</p>
+        </div>
+        <div class="testimonial">
+            <p>"Outstanding results! Exceeded all my expectations."</p>
+            <p>- Client 3</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Victory Vijayalaxmi. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
